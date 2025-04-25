@@ -32,7 +32,11 @@ header{
     grid-template-columns: 4fr 1fr;
     grid-template-areas: 
     "bio photo"
-    "skills skills";
+    "skills skills"
+    "experience experience"
+    "contact-me contact-me"
+    "contact-info contact-info"
+    ;
     margin: 20px;
     gap: 5px;
     /* align-self: stretch; */
@@ -121,7 +125,10 @@ img{
         /* grid-template-columns: 4fr 1fr; */
         grid-template-areas: 
         "bio photo"
-        "bio skills";
+        "bio skills"
+        "experience experience"
+        "contact-me contact-info";
+        /* "contact-me contact-me" */
         /* grid-template-rows: minmax(100px, 40%) minmax(auto, 50%); */
     }
     .skill{
@@ -149,10 +156,10 @@ main{
     /* padding-top: 50px; */
 }
 .experience{
+    grid-area: experience;
     border: 1px solid black;
     border-radius: 20px;
     background-color: #e2f3b2;
-    margin: 0 20px;
 }
 .experience-head{
     display: flex;
@@ -220,10 +227,11 @@ main{
 .contact {
   /* padding: 0 20px 20px 20px; */
   /* max-width: 600px; */
-  margin: auto;
+  grid-area: contact-me;
+  /* margin: auto; */
   text-align: center;
   border: 1px solid black;
-  margin: 20px;
+  /* margin: 20px; */
   background-color: bisque;
   border-radius: 20px;
 }
@@ -277,13 +285,18 @@ main{
 }
 
 .contact-info {
+    grid-area: contact-info;
     text-align: center;
     /* padding: 40px 20px; */
     border: 1px solid black;
     background-color: aquamarine;
     border-radius: 20px;
-    margin: 20px;
+    /* margin: 20px; */
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
   }
   .contact-info h2{
     width: 100%;
@@ -301,6 +314,7 @@ main{
   .contact-info ul {
     list-style: none;
     padding: 0;
+    margin: auto;
   }
   
   .contact-info li {
