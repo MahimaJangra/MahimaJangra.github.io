@@ -84,7 +84,7 @@
     <h2>Contact Me</h2>
     <p>Have a question or want to work together? Feel free to reach out!</p>
   
-    <form class="contact-form" action="https://formspree.io/f/xovdvaro" method="POST">
+    <form class="contact-form" action="https://formspree.io/f/xovdvaro" method="POST" onsubmit="setTimeout(() => this.reset(), 10)">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
