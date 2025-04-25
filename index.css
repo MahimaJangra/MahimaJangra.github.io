@@ -219,9 +219,13 @@ main{
 /* Contact Section */
 .contact {
   padding: 60px 20px;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: auto;
   text-align: center;
+  border: 1px solid black;
+  margin: 20px;
+  background-color: bisque;
+  border-radius: 20px;
 }
 
 .contact h2 {
@@ -263,7 +267,12 @@ main{
 
 .contact-info {
     text-align: center;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
+    border: 1px solid black;
+    background-color: aquamarine;
+    border-radius: 20px;
+    margin: 20px;
+    padding-bottom: 20px;
   }
   
   .contact-info ul {
