@@ -50,6 +50,9 @@ header{
     grid-area: bio;
     font-size: 1rem;
     /* background-color: #ffabab; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .photo{
     grid-area: photo;
