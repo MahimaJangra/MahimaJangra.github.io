@@ -37,7 +37,6 @@ header{
     "contact-me contact-me"
     "contact-info contact-info"
     ;
-    margin: 20px;
     gap: 50px;
     /* align-self: stretch; */
     /* min-height: 70vh; */
@@ -49,7 +48,8 @@ header{
     /* border-radius: 20px; */
     padding: 10px;
     grid-area: bio;
-    background-color: #ffabab;
+    font-size: 1rem;
+    /* background-color: #ffabab; */
 }
 .photo{
     grid-area: photo;
@@ -60,7 +60,7 @@ header{
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background-color: rgb(148, 237, 237);
+    /* background-color: rgb(148, 237, 237); */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -78,7 +78,7 @@ img{
 }
 .skill-head{
     width: 100%;
-    background-color: gray;
+    /* background-color: gray; */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     display: flex;
@@ -93,10 +93,12 @@ img{
     grid-area: skills;
     min-width: 30vw;
     width: 100%;
-    background-color: #333;
+    background-color: #d8d7d7;
+    padding: 30px;
+    /* height: 200px; */
     /* border: 1px solid black; */
     /* border-radius: 20px; */
-    background-color: rgb(211, 194, 227);
+    /* background-color: rgb(211, 194, 227); */
 }
 .skill-wrapper{
     display: flex;
@@ -116,13 +118,13 @@ img{
     /* width: auto; */
     min-width: 200px;
     max-width: 500px;
-    background-color: #a8a8a8;
+    background-color: #cacaca;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* border-radius: 10px;
-    border: 1px solid black; */
+    border-radius: 10px;
+    /* border: 1px solid black; */
     padding: 10px;
     margin: 0;
 }
@@ -183,13 +185,13 @@ main{
     grid-area: experience;
     /* border: 1px solid black; */
     /* border-radius: 20px; */
-    background-color: #e2f3b2;
+    /* background-color: #e2f3b2; */
 }
 .experience-head{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    /* background-color: gray; */
     height: 40px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -205,7 +207,7 @@ main{
 .exp{
     flex: 1;
     flex-basis: 40%;
-    background-color: #f3fdda;
+    /* background-color: #cecdcd; */
     /* border: 1px solid black;
     border-radius: 20px; */
     padding: 5px;
@@ -231,7 +233,7 @@ main{
     height: 100%;
     display: none;
     /* border: 2px solid red; */
-    background-color: #f3fdda;
+    background-color: #d8d7d7;
     /* border-radius: 20px; */
     padding: 10px;
     color: #121212;
@@ -253,7 +255,7 @@ main{
 .contact {
   grid-area: contact-me;
   text-align: center;
-  background-color: bisque;
+  background-color: #d8d7d7;
 }
 
 .contact h2 {
@@ -284,7 +286,7 @@ main{
 }
 
 .contact-form button {
-  background-color: #3498db;
+  background-color: #9b9b9b;
   color: white;
   padding: 12px 15px;
   font-size: 1rem;
@@ -299,7 +301,7 @@ main{
 .contact-info {
     grid-area: contact-info;
     text-align: center;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -307,7 +309,7 @@ main{
   }
   .contact-info h2{
     width: 100%;
-    background-color: gray;
+    /* background-color: gray; */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     display: flex;
@@ -322,6 +324,9 @@ main{
     padding: 0;
     margin: auto;
   } 
+  .contact-info li{
+    padding: 8px;
+  }
   h3, h2, a ,p{
     word-break: break-word;
   }
