@@ -29,45 +29,52 @@ header{
 }
 .sections{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas: 
-    "bio photo"
+    "photo bio"
     "skills skills"
     "experience experience"
     "contact-me contact-me"
     "contact-info contact-info"
     ;
     margin: 20px;
-    gap: 5px;
+    gap: 50px;
     /* align-self: stretch; */
     /* min-height: 70vh; */
-    /* background-color: bisque;
-    border: 5px solid red; */
+    /* background-color: thistle; */
+    /* border: 5px solid red; */
 }
 .bio{
-    border: 1px solid black;
-    border-radius: 20px;
+    /* border: 1px solid black; */
+    /* border-radius: 20px; */
     padding: 10px;
     grid-area: bio;
     background-color: #ffabab;
 }
 .photo{
     grid-area: photo;
-    max-width: 300px;
-    border: 1px solid black;
-    border-radius: 20px;
+    /* max-width: 300px; */
+    /* border: 1px solid black; */
+    /* border-radius: 20px; */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
     background-color: rgb(148, 237, 237);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 img{
     width: 100%;
     height: auto;
-    max-width: 250px;
-    object-fit: contain;
-    border-radius: 20px;
+    max-width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.photo h2{
+
 }
 .skill-head{
     width: 100%;
@@ -86,29 +93,36 @@ img{
     grid-area: skills;
     min-width: 30vw;
     width: 100%;
-    /* background-color: #333; */
-    border: 1px solid black;
-    border-radius: 20px;
+    background-color: #333;
+    /* border: 1px solid black; */
+    /* border-radius: 20px; */
     background-color: rgb(211, 194, 227);
 }
 .skill-wrapper{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    gap: 20px;
     align-items: center;
+    padding: 5px 20px;
+}
+.skill-wrapper > * {
+    /* flex: 0 0 20%; */
+    flex: 1 1 200px;
+    /* max-width: 25%; */
 }
 .skill{
     /* width: auto; */
     min-width: 200px;
     max-width: 500px;
-    /* background-color: #333; */
+    background-color: #a8a8a8;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 10px;
-    border: 1px solid black;
+    /* border-radius: 10px;
+    border: 1px solid black; */
     padding: 10px;
     margin: 0;
 }
@@ -124,15 +138,25 @@ img{
     .sections{
         /* grid-template-columns: 4fr 1fr; */
         grid-template-areas: 
-        "bio photo"
-        "bio skills"
+        "photo photo"
+        "bio bio"
+        "skills skills"
         "experience experience"
-        "contact-me contact-info";
+        "contact-me contact-me"
+        "contact-info contact-info";
         /* "contact-me contact-me" */
         /* grid-template-rows: minmax(100px, 40%) minmax(auto, 50%); */
     }
     .skill{
         min-width: 0;
+    }
+    .photo{
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 200px) {
+    .photo{
+        flex-direction: column;
     }
 }
 body {
@@ -157,8 +181,8 @@ main{
 }
 .experience{
     grid-area: experience;
-    border: 1px solid black;
-    border-radius: 20px;
+    /* border: 1px solid black; */
+    /* border-radius: 20px; */
     background-color: #e2f3b2;
 }
 .experience-head{
@@ -181,10 +205,19 @@ main{
 .exp{
     flex: 1;
     flex-basis: 40%;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 15px;
+    background-color: #f3fdda;
+    /* border: 1px solid black;
+    border-radius: 20px; */
+    padding: 5px;
     /* min-width: 400px; */
+}
+.exp h3{
+    font-weight: lighter;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+.project-detail p{
+    font-size: small;
 }
 .project{
     font-size: large;
@@ -199,7 +232,7 @@ main{
     display: none;
     /* border: 2px solid red; */
     background-color: #f3fdda;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     padding: 10px;
     color: #121212;
 }
@@ -216,31 +249,15 @@ main{
     display: none;
 }
 
-
-
-
-
-
-
-
-/* Contact Section */
+/* ================================================= */
 .contact {
-  /* padding: 0 20px 20px 20px; */
-  /* max-width: 600px; */
   grid-area: contact-me;
-  /* margin: auto; */
   text-align: center;
-  border: 1px solid black;
-  /* margin: 20px; */
   background-color: bisque;
-  border-radius: 20px;
 }
 
 .contact h2 {
-  /* font-size: 2rem;
-  margin-bottom: 10px; */
   width: 100%;
-    background-color: gray;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     display: flex;
@@ -248,7 +265,6 @@ main{
     align-items: center;
     padding: 10px;
     margin: 0;
-    /* height: 40px; */
     font-size: 1rem;
 }
 
@@ -262,8 +278,6 @@ main{
 .contact-form input,
 .contact-form textarea {
   padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid black;
   font-size: 1rem;
   font-family: inherit;
   resize: vertical;
@@ -273,8 +287,6 @@ main{
   background-color: #3498db;
   color: white;
   padding: 12px 15px;
-  border: none;
-  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s ease;
@@ -283,19 +295,14 @@ main{
 .contact-form button:hover {
   background-color: #2980b9;
 }
-
+/* =============================================== */
 .contact-info {
     grid-area: contact-info;
     text-align: center;
-    /* padding: 40px 20px; */
-    border: 1px solid black;
     background-color: aquamarine;
-    border-radius: 20px;
-    /* margin: 20px; */
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
   }
   .contact-info h2{
@@ -308,20 +315,16 @@ main{
     align-items: center;
     padding: 10px;
     margin: 0;
-    /* height: 40px; */
     font-size: 1rem;
   }
   .contact-info ul {
     list-style: none;
     padding: 0;
     margin: auto;
+  } 
+  h3, h2, a ,p{
+    word-break: break-word;
   }
-  
-  .contact-info li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-  }
-  
   .contact-info a {
     color: #333;
     text-decoration: none;
@@ -329,6 +332,6 @@ main{
   }
   
   .contact-info a:hover {
-    color: #0077b5; /* LinkedIn blue */
+    color: #0077b5; 
   }
   
