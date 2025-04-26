@@ -48,7 +48,7 @@ header{
     /* border-radius: 20px; */
     padding: 10px;
     grid-area: bio;
-    font-size: 1rem;
+    font-size: 0.9rem;
     /* background-color: #ffabab; */
     display: flex;
     align-items: center;
