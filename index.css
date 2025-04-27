@@ -27,6 +27,7 @@ header{
     align-items: center;
     flex-direction: row;
 }
+
 .sections{
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -48,11 +49,15 @@ header{
     /* border-radius: 20px; */
     padding: 10px;
     grid-area: bio;
-    font-size: 0.9rem;
+    font-size: 16px;
     /* background-color: #ffabab; */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.name{
+    color: #d68c8c;
+    font-weight: bold;
 }
 .photo{
     grid-area: photo;
@@ -121,7 +126,7 @@ img{
     /* width: auto; */
     min-width: 200px;
     max-width: 500px;
-    background-color: #cacaca;
+    background-color: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,6 +135,10 @@ img{
     /* border: 1px solid black; */
     padding: 10px;
     margin: 0;
+}
+.skill:hover{
+    color: black;
+    transform: scale(1.05);
 }
 /* :root {
     --bg-color: white;
@@ -180,11 +189,16 @@ a{
 }
 a:hover{
     transform: scale(1.2);
+    color: #d68c8c;
 }
 main{
     /* padding-top: 50px; */
+    background-color: #f8f9fa;
+    color: #343a40;
 }
 .experience{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     grid-area: experience;
     /* border: 1px solid black; */
     /* border-radius: 20px; */
@@ -236,10 +250,9 @@ main{
     height: 100%;
     display: none;
     /* border: 2px solid red; */
-    background-color: #d8d7d7;
+    background-color: #d8d7d7   ;
     /* border-radius: 20px; */
     padding: 10px;
-    color: #121212;
 }
 .exp:hover .project-detail{
     /* visibility: visible; */
@@ -298,7 +311,9 @@ main{
 }
 
 .contact-form button:hover {
-  background-color: #2980b9;
+  background-color: #d68c8c;
+  color: #343a40;
+  border: none;
 }
 /* =============================================== */
 .contact-info {
@@ -330,8 +345,15 @@ main{
   .contact-info li{
     padding: 8px;
   }
-  h3, h2, a ,p{
+  h3, h2{
     word-break: break-word;
+    font-family: 'Open Sans';
+    /* Roboto,  */
+  }
+  a ,p, div{
+    word-break: break-word;
+    font-family: system-ui; 
+    /*sans-serif, system-ui,'Segoe UI',  */
   }
   .contact-info a {
     color: #333;
@@ -340,6 +362,6 @@ main{
   }
   
   .contact-info a:hover {
-    color: #0077b5; 
+    color: #d68c8c; 
   }
   
